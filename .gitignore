@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int maximocd(int a, int b){
+    int resultado= 1;
+    for (int i=1; i<= a; i++){
+     if ((a%i==0)&&(b%i==0)){
+        resultado= i;
+     }
+    }
+    return resultado;
+}
+
+
+int main()
+{
+    int n1, n2;
+    cout << "Introduce el primer numero " << endl;
+    cin >> n1;
+
+    cout << "Introduce el segundo numero" << endl;
+    cin >> n2;
+
+    int res= maximocd(n1,n2);
+    cout<< "El maximo comun divisor de los numeros es: " << res <<endl;
+
+    return 0;
+}
